@@ -1,33 +1,22 @@
 <template>
   <div id="app">
     <Navigation />
-    <Jumbotron />
-    <div class="container">
-      <Features />
-    </div>
+    <Home />
   </div>
 </template>
-
 <script>
 import "@fortawesome/fontawesome-free/css/all.css";
-
-import Navigation from "./components/Navigation.vue";
-import Jumbotron from "./components/Jumbotron.vue";
-import Features from "./components/Features.vue";
-
+import Navigation from "./components/Navigation";
+import Home from './views/Home'
 export default {
-  name: "App",
   components: {
-    Jumbotron,
     Navigation,
-    Features,
+    Home
   },
 };
 </script>
-
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;900&display=swap");
-
 #app {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +27,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
-  
+
   background-color: #f5f5f5;
 }
 </style>

@@ -1,8 +1,14 @@
 <template>
 <header>
+
+   
+     
+
+
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="#">Lite E-Commerce</a>
+    <router-link class="navbar-brand" to="/">Lite E-Commerce</router-link>
+     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,13 +16,16 @@
       <ul class="navbar-nav mr-auto">
          
         <li class="nav-item active">
-          <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+          <router-link class="nav-link" to="/products">Products</router-link>
+           
         </li>
         <li class="nav-item">
-         <a class="nav-link" href="#">Featured Products</a>
+          <router-link class="nav-link" to="/featured-products">Featured Products</router-link>
+         
         </li>
         <li class="nav-item">
-         <a class="nav-link" href="#">Promos</a>
+          <router-link class="nav-link" to="/promos">Promos</router-link>
+          
         </li>
       </ul>
        <span class="navbar-text">
