@@ -27,11 +27,11 @@
 </template>
 
 <script>
-import FeaturedProducts from "../components/FeaturedProducts.vue";
+import FeaturedProducts from "@/components/FeaturedProducts";
 export default {
   name: "NotFound",
   components: {
-    FeaturedProducts,
+    FeaturedProducts
   },
 };
 </script>

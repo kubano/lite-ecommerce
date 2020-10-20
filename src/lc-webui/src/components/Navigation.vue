@@ -38,7 +38,7 @@
                 >Cart
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-show="!isAuthenticated">
               <a href="#" class="btn btn-sm btn-primary text-white">
                 <i class="fas fa-user-plus mr-1"></i> Sign Up
               </a>
@@ -51,13 +51,17 @@
 </template>
 
 <script>
+ 
 export default {
   name: "Navigation",
   data() {
     return {
-      cartItems: 0,
+      cartItems: 1,
     };
   },
+  computed: {
+    isAuthenticated: () => { return false }
+  }
 };
 </script>
 

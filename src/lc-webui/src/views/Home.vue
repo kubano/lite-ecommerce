@@ -32,16 +32,19 @@
         </div>
       </div>
     </div>
+
+    <FeaturedProducts />
   </div>
 </template>
 
 <script>
-import Jumbotron from "../components/Jumbotron";
-
+import Jumbotron from "@/components/Jumbotron";
+import FeaturedProducts from '@/components/FeaturedProducts'
 export default {
   name: "Home",
   components: {
     Jumbotron,
+    FeaturedProducts
   },
 };
 </script>

@@ -12,7 +12,7 @@
 export default {
   name: "FeaturedProducts",
   data() {
-    return [];
+    return {};
   },
 };
 </script>
