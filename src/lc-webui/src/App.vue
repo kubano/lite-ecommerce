@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <Navigation />
-    <Home />
+     <router-view />
   </div>
 </template>
 <script>
 import "@fortawesome/fontawesome-free/css/all.css";
 import Navigation from "./components/Navigation";
-import Home from './views/Home'
+ 
 export default {
   components: {
-    Navigation,
-    Home
-  },
+    Navigation, 
+  }
 };
 </script>
 <style>
@@ -21,7 +20,7 @@ export default {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 3.3em;
+  margin-top: 4em;
 }
 .footer {
   position: absolute;

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,10 @@ const routes = [
     path: '/products',
     name: 'Products',
     component: () => import('../views/Products.vue')
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 
