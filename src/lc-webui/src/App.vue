@@ -6,7 +6,7 @@
 </template>
 <script>
 import "@fortawesome/fontawesome-free/css/all.css";
-import Navigation from "./components/Navigation";
+import Navigation from "@/components/Navigation";
  
 export default {
   components: {
