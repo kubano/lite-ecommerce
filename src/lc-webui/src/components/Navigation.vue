@@ -20,28 +20,35 @@
           <li class="nav-item active">
             <router-link class="nav-link" to="/products">Products</router-link>
           </li>
-          
           <li class="nav-item">
             <router-link class="nav-link" to="/promos">Promos</router-link>
           </li>
         </ul>
         <span class="navbar-text">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item mr-2 mb-1">
-              <router-link to="/cart" class="btn btn-outline-success btn-sm">
+            <li class="nav-item" v-show="!isAuthenticated">
+              <router-link
+                to="/login"
+                class="btn btn-sm btn-primary text-white mr-2">
+                <i class="fas fa-sign-in-alt mr-1"></i>Sign In
+              </router-link>
+            </li>
+            
+            <li class="nav-item" v-show="!isAuthenticated">
+              <a href="#" class="btn btn-sm btn-success text-white">
+                <i class="fas fa-user-plus mr-1"></i>Register
+              </a>
+            </li>
+            <li class="nav-item ml-2 mt-1">
+              <router-link to="/cart">
                 <i class="fas fa-shopping-cart mr-1"></i
                 ><span
                   v-show="cartItems > 0"
                   id="js-cart-counter"
-                  class="float-right badge badge-secondary ml-2"
+                  class="float-right badge badge-danger ml-2"
                   >{{ cartItems }}</span
                 >Cart
               </router-link>
-            </li>
-            <li class="nav-item" v-show="!isAuthenticated">
-              <a href="#" class="btn btn-sm btn-primary text-white">
-                <i class="fas fa-user-plus mr-1"></i> Sign Up
-              </a>
             </li>
           </ul>
         </span>
@@ -49,9 +56,7 @@
     </nav>
   </header>
 </template>
-
 <script>
- 
 export default {
   name: "Navigation",
   data() {
@@ -60,8 +65,10 @@ export default {
     };
   },
   computed: {
-    isAuthenticated: () => { return false }
-  }
+    isAuthenticated: () => {
+      return false;
+    },
+  },
 };
 </script>
 
